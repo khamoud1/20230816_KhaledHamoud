@@ -1,0 +1,367 @@
+PS C:\Users\Anwender\pyt> mkdir 20230816_KhaledHamoud
+
+
+    Directory: C:\Users\Anwender\pyt
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16.08.2023     11:28                20230816_KhaledHamoud
+
+
+PS C:\Users\Anwender\pyt> cd .\20230816_KhaledHamoud\
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> New-Item -ItemType File -Path .hello.java
+
+
+    Directory: C:\Users\Anwender\pyt\20230816_KhaledHamoud
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        16.08.2023     11:29              0 .hello.java
+
+
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> ls
+
+
+    Directory: C:\Users\Anwender\pyt\20230816_KhaledHamoud
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        16.08.2023     11:29              0 .hello.java
+
+
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git add .\.hello.java
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git init
+Initialized empty Git repository in C:/Users/Anwender/pyt/20230816_KhaledHamoud/.git/
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git .add .\.hello.java
+git: '.add' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> notepad.exe .\.hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .hello.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git commit -am "first java "
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .hello.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git add .\.hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git commit -am "added a new java file
+>> "
+[master (root-commit) ffa9b35] added a new java file
+ 1 file changed, 22 insertions(+)
+ create mode 100644 .hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git remote add origin git@github.com:khamoud1/20230816_KhaledHamoud.git
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 465 bytes | 465.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:khamoud1/20230816_KhaledHamoud.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> mv .hello.java hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud>
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git add hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git commit -m "Rename file from .hello.java to hello.java"
+[main 0d7c6eb] Rename file from .hello.java to hello.java
+ 1 file changed, 22 insertions(+)
+ create mode 100644 hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> notepad.exe
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> notepad.exe .\hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git checkout main
+Already on 'main'
+D       .hello.java
+M       hello.java
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git checkout -b add-documentation
+Switched to a new branch 'add-documentation'
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git add hello.java
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git commit -m "Add documentation comments to Hello class"
+[add-documentation 42b6348] Add documentation comments to Hello class
+ 1 file changed, 12 insertions(+)
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git push origin add-documentation
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 841 bytes | 841.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'add-documentation' on GitHub by visiting:
+remote:      https://github.com/khamoud1/20230816_KhaledHamoud/pull/new/add-documentation
+remote:
+To github.com:khamoud1/20230816_KhaledHamoud.git
+ * [new branch]      add-documentation -> add-documentation
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git checkout main
+Switched to branch 'main'
+D       .hello.java
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git merge add-documentation
+Updating 0d7c6eb..42b6348
+Fast-forward
+ hello.java | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git add <conflicted-file>
+At line:1 char:9
++ git add <conflicted-file>
++         ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git commit
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    .hello.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:khamoud1/20230816_KhaledHamoud.git
+   ffa9b35..42b6348  main -> main
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> add-documentation
+add-documentation : The term 'add-documentation' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or
+if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ add-documentation
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (add-documentation:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud>  git checkout main
+Already on 'main'
+D       .hello.java
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git branch -d add-documentation
+Deleted branch add-documentation (was 42b6348).
+PS C:\Users\Anwender\pyt\20230816_KhaledHamoud> git push origin --delete add-documentation
+To github.com:khamoud1/20230816_KhaledHamoud.git
+ - [deleted]         add-documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
